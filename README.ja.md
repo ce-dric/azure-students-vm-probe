@@ -99,6 +99,24 @@ bash azure-students-vm-probe.sh
   az group delete --name <RESOURCE_GROUP> --yes
   ```
 
+## k-skill として使う
+
+このリポジトリには `SKILL.md` が含まれており、[k-skill](https://github.com/NomaDamas/k-skill) に登録すると Claude Code が代わりに探索を実行してくれます。
+
+**スキルのインストール:**
+
+```bash
+mkdir -p ~/.claude/skills/azure-students-vm-probe
+cp SKILL.md ~/.claude/skills/azure-students-vm-probe/
+```
+
+**あとは Claude に話しかけるだけです:**
+
+> "Azure Student アカウントでデプロイできるリージョンを探して"
+> "Azure for Students で VM を 1 台作って"
+
+Claude が探索を実行して結果テーブルをレポートし、必要に応じて VM を作成します。
+
 ## ライセンス
 
 MIT

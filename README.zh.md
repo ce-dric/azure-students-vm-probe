@@ -99,6 +99,24 @@ bash azure-students-vm-probe.sh
   az group delete --name <RESOURCE_GROUP> --yes
   ```
 
+## 作为 k-skill 使用
+
+本仓库包含 `SKILL.md`，注册为 [k-skill](https://github.com/NomaDamas/k-skill) 后，Claude Code 可以直接帮你执行探测。
+
+**安装 skill：**
+
+```bash
+mkdir -p ~/.claude/skills/azure-students-vm-probe
+cp SKILL.md ~/.claude/skills/azure-students-vm-probe/
+```
+
+**然后直接告诉 Claude：**
+
+> "帮我找 Azure Student 账号里能部署的区域"
+> "用 Azure for Students 创建一台 VM"
+
+Claude 会执行探测、汇报结果表格，并在需要时创建 VM。
+
 ## 许可证
 
 MIT
